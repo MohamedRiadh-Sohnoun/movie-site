@@ -1,0 +1,18 @@
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 2rem;
+  color: #24baef
+}
+
+span {
+  position: absolute;
+  right: 28%;
+  top: 90%;
+  ;
+  font-size: 0.9rem;
+  color: #24baef
+}

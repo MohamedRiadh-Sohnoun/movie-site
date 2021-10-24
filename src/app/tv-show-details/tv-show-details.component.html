@@ -1,0 +1,52 @@
+<div class="container shadow-lg">
+    <div class="row">
+        <div class="col-md-4 borderColor mt-5">
+            <img class="w-100 rounded" [src]="imgPrefix+movieDetials?.poster_path" alt="">
+        </div>
+       
+        <div class="col-md-8 py-5 ">
+            <table class="table table-bordered text-white">
+  <thead>
+    <tr>
+      <th scope="col" colspan="2" class="text-center">{{movieDetials?.original_name}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">language</th>
+      <td >{{w}}</td>
+    </tr>
+     <tr>
+      <th scope="row">created by</th>
+      <td >{{z}}</td>
+    </tr>
+        <tr>
+      <th scope="row">Category</th>
+      <td >{{x}}</td>
+    </tr>
+        <tr>
+      <th scope="row">country</th>
+      <td >{{y}}</td>
+    </tr>
+     <tr>
+      <th scope="row">number of seasons</th>
+      <td>{{movieDetials?.number_of_seasons}}</td>
+    </tr>
+      <tr>
+      <th scope="row">number of episodes</th>
+      <td>{{movieDetials?.number_of_episodes}}</td>
+    </tr>
+        <tr>
+      <th scope="row">vote rate</th>
+      <td>{{movieDetials?.vote_average}}</td>
+    </tr>
+         <tr>
+      <th scope="row">count rate</th>
+      <td>{{movieDetials?.vote_count}}</td>
+    </tr>
+  </tbody>
+</table>      
+            <p class="text-muted p-3">{{movieDetials?.overview}}</p>
+        </div>
+    </div>
+</div>

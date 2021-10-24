@@ -1,0 +1,19 @@
+<div class="container shadow-lg">
+    <div class="row p-2">
+        <div  class="col-md-4 borderColor ">
+            <img class="w-100 rounded" [src]="imgPrefix+movieDetials?.profile_path" alt="">
+            <h2 class="text-center">{{movieDetials?.name}}</h2>
+            <p>Known for: {{movieDetials?.known_for_department}}</p>
+            <p>Gender: {{gender}}</p>
+            <p>birthday: {{movieDetials?.birthday}}</p>
+            <p>place of birth: {{movieDetials?.place_of_birth}}</p>
+
+        </div>
+        <div class="col-md-8 d-flex justify-content-center ">
+           <div>
+            <h2 class="mt-2">biography</h2>
+            <p class="text-muted mt-3">Known for: {{movieDetials?.biography}}</p>
+           </div>
+        </div>
+    </div>
+</div>

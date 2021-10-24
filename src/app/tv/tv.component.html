@@ -1,0 +1,61 @@
+<div class="row justify-content-center">
+  <div class="col-md-12">
+    <div class="p-4 w-75 m-auto">
+      <input
+        type="text"
+        [(ngModel)]="term"
+        class="form-control bg-transparent"
+        placeholder="search..."
+        name=""
+        id=""
+      />
+    </div>
+  </div>
+
+  <div
+    *ngFor="
+      let tv of trendingTv
+        | search: term
+        | paginate
+          : {
+              itemsPerPage: 1,
+              currentPage: page,
+              totalItems: totalPage
+            };
+      let i = index
+    "
+    class="col-md-2 py-3 d-flex justify-content-center"
+  >
+    <div [routerLink]="['/tvdetails', tv?.id]" class="movie position-relative">
+      <div class="position-relative posterr overflow-hidden">
+        <img class="w-100 rounded" [src]="imgPrefix + tv?.poster_path" alt="" />
+        <div
+          class="
+            layer
+            position-absolute
+            d-flex
+            justify-content-center
+            align-items-center
+          "
+        >
+          <h6 class="text-wight">more info..</h6>
+        </div>
+      </div>
+      <h4 class="my-2 h5">{{ tv?.title }}</h4>
+      <div class="vote position-absolute rounded-right">
+        {{ tv?.vote_average }}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <pagination-controls
+      previousLabel="Prev"
+      nextLabel="Next"
+      [responsive]="true"
+      (pageChange)="handel($event)"
+    >
+    </pagination-controls>
+  </div>
+</div>
